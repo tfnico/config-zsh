@@ -39,6 +39,15 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    #load boxen/homebrew
    source /opt/boxen/env.sh
    PATH="/opt/boxen/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+
+# Fix broken pasteboard support in tmux under OSX
+  if type reattach-to-user-namespace >/dev/null 2>&1; then
+    exec reattach-to-user-namespace -l zsh
+  else
+    echo "System clipboard link is broken, but reattach-to-user-namespace not found." >&2
+    echo "Please install reattach-to-user-namespace." >&2
+    echo "https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard" >&2
+  fi
 fi
 
 if [[ $platform == 'linux' ]]; then
