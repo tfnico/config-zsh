@@ -13,6 +13,7 @@ CASE_SENSITIVE="true"
 
 # Some extra features:
 #
+source ~/.zsh/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-history-substring-search.zsh
 
 # bind UP and DOWN arrow keys, could be Ubuntu specific
