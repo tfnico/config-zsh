@@ -20,6 +20,17 @@ source ~/.zsh/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+# Use emacs keybindings even if our EDITOR is set to vi
+bindkey -e
+
+# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
+
+# Share history between sessions
+setopt SHARE_HISTORY
+
 # Customize to your needs...
 unsetopt correct_all
 if [ -f "$HOME/prefs/env" ]; then
