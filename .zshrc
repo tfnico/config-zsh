@@ -11,6 +11,14 @@ CASE_SENSITIVE="true"
 #compdef not found?
 #source ~/prefs/git-completion.bash
 
+# Some extra features:
+#
+source ~/.zsh/zsh-history-substring-search.zsh
+
+# bind UP and DOWN arrow keys, could be Ubuntu specific
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 # Customize to your needs...
 unsetopt correct_all
 if [ -f "$HOME/prefs/env" ]; then
