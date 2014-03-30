@@ -1,7 +1,2 @@
-*
-!.gitignore.d
-!.gitignore.d/zsh
-!.zsh
-!.zsh/history-substring-search.zsh
-!.zshrc
+#Intentionally empty. I don't like the whitelisting ignore stuff
 
