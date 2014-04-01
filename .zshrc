@@ -17,6 +17,7 @@ source ~/.zsh/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-history-substring-search.zsh
 
 # bind UP and DOWN arrow keys, could be Ubuntu specific
+# This works fine, also on osx, but not under tmux..
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
@@ -61,13 +62,13 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    PATH="/opt/boxen/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 
 # Fix broken pasteboard support in tmux under OSX
-  if type reattach-to-user-namespace >/dev/null 2>&1; then
-    exec reattach-to-user-namespace -l zsh
-  else
-    echo "System clipboard link is broken, but reattach-to-user-namespace not found." >&2
-    echo "Please install reattach-to-user-namespace." >&2
-    echo "https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard" >&2
-  fi
+#  if type reattach-to-user-namespace >/dev/null 2>&1; then
+#    exec reattach-to-user-namespace -l zsh
+#  else
+#    echo "System clipboard link is broken, but reattach-to-user-namespace not found." >&2
+#    echo "Please install reattach-to-user-namespace." >&2
+#    echo "https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard" >&2
+#  fi
 fi
 
 if [[ $platform == 'linux' ]]; then
