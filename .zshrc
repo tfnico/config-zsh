@@ -42,9 +42,9 @@ fi
 zstyle ':completion:*' special-dirs true
 
 # Source the shell switcher at work
-if [ -f "$HOME/.shell.sh" ]; then
-  source ~/.shell.sh
-fi
+#if [ -f "$HOME/.shell.sh" ]; then
+#  source ~/.shell.sh
+#fi
 
 # OS specific stuff
 
@@ -52,8 +52,9 @@ platform='unknown'
 unamestr=$(uname)
 if [[ "$unamestr" == 'Linux' ]]; then
    platform='linux'
-elif [[ "$unamestr" == 'FreeBSD' ]]; then
-   platform='freebsd'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+   platform='mac'
+   source /opt/boxen/env.sh
 fi
 
 if [[ $platform == 'linux' ]]; then
