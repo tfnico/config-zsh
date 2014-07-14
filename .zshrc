@@ -99,3 +99,9 @@ if [[ $platform == 'linux' ]]; then
     alias pbpaste='xsel --clipboard --output'
 fi
 
+# Easily switch between java version
+# e.g. setjava 8
+# e.g. setjava 7
+setjava () {
+    export JAVA_HOME=`/usr/libexec/java_home -v 1.$1`
+}
