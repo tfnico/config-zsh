@@ -100,11 +100,8 @@ if [[ $platform == 'linux' ]]; then
 fi
 
 # Easily switch between java version
-# e.g. setjava 8
-# e.g. setjava 7
-setjava () {
-    export JAVA_HOME=`/usr/libexec/java_home -v 1.$1`
-}
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 # For connecting to boot2docker on osx:
 export DOCKER_HOST=tcp://192.168.59.103:2375
