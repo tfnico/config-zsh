@@ -106,3 +106,7 @@ eval "$(jenv init -)"
 # For connecting to boot2docker on osx:
 export DOCKER_HOST=tcp://192.168.59.103:2375
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export EDITOR=vim
+
