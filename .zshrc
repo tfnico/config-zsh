@@ -103,6 +103,12 @@ fi
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
+jenv_java=$(jenv global) # yields 'oracle64-1.6.0.54'
+echo $jenv_java
+jenv_java_without_oracle=${jenv_java#*oracle64-} # yields '1.6.0.54'
+echo $jenv_java_without_oracle
+export JAVA_HOME=$(/usr/libexec/java_home -v "$jenv_java_without_oracle")
+
 # For connecting to boot2docker on osx:
 export DOCKER_HOST=tcp://192.168.59.103:2375
 
@@ -110,3 +116,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export EDITOR=vim
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/tfnico/.gvm/bin/gvm-init.sh" ]] && source "/Users/tfnico/.gvm/bin/gvm-init.sh"
