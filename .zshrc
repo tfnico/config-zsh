@@ -90,7 +90,6 @@ if [[ "$unamestr" == 'Linux' ]]; then
    platform='linux'
 elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='mac'
-   source /opt/boxen/env.sh
 fi
 
 if [[ $platform == 'linux' ]]; then
@@ -104,19 +103,6 @@ if [[ $platform == 'linux' ]]; then
     alias pbpaste='xsel --clipboard --output'
 fi
 
-# Easily switch between java version
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
-jenv_java=$(jenv global) # yields 'oracle64-1.6.0.54'
-echo $jenv_java
-jenv_java_without_oracle=${jenv_java#*oracle64-} # yields '1.6.0.54'
-echo $jenv_java_without_oracle
-export JAVA_HOME=$(/usr/libexec/java_home -v "$jenv_java_without_oracle")
-
-# For connecting to boot2docker on osx:
-export DOCKER_HOST=tcp://192.168.59.103:2375
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export EDITOR=vim
@@ -124,6 +110,7 @@ export EDITOR=vim
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/tfnico/.gvm/bin/gvm-init.sh" ]] && source "/Users/tfnico/.gvm/bin/gvm-init.sh"
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -132,3 +119,5 @@ export EDITOR=vim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias pb=pbcopy
+
