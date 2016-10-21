@@ -59,6 +59,7 @@ plugins=(git history-substring-search docker tmuxinator)
 # User configuration
 export PATH=/usr/local/bin:\
 /usr/local/sbin:\
+/usr/local/opt/ruby/bin:\
 /usr/bin:\
 /bin:\
 /usr/sbin:\
