@@ -108,7 +108,7 @@ if [[ $platform == 'linux' ]]; then
     alias open=gnome-open
     #Can't remember what the following fix was for. tmux problems
     #on ubuntu I think.
-    alias tig="TERM=screen /usr/local/bin/tig"
+    alias tig="TERM=screen /usr/bin/tig"
     alias open="gnome-open"
     alias pbcopy='xsel --clipboard --input'
     alias pbpaste='xsel --clipboard --output'
@@ -131,4 +131,7 @@ export EDITOR=vim
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pb=pbcopy
+
+# solarized dircolors: The new dircolors have been installed to /home/ferris/.dir_colors/dircolors.
+eval `dircolors ~/.dir_colors/dircolors`
 
