@@ -54,6 +54,7 @@ ZSH_THEME="robbyrussell"
 #
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git history-substring-search docker tmuxinator)
+plugins+=(zsh-nvm)
 
 
 # User configuration
@@ -131,6 +132,7 @@ export EDITOR=vim
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pb=pbcopy
+alias mux=tmuxinator
 
 # solarized dircolors: The new dircolors have been installed to /home/ferris/.dir_colors/dircolors.
 eval `dircolors ~/.dir_colors/dircolors`
