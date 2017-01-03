@@ -133,6 +133,8 @@ export EDITOR=vim
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pb=pbcopy
 alias mux=tmuxinator
+function sshunsafe() { ssh -v -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $1 }
+
 
 # solarized dircolors: The new dircolors have been installed to /home/ferris/.dir_colors/dircolors.
 eval `dircolors ~/.dir_colors/dircolors`
