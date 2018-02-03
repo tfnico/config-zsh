@@ -1,3 +1,6 @@
+# For fancy terminal
+export TERM="xterm-256color"
+
 # Enable bash style comments
 setopt interactivecomments
 
