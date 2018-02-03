@@ -57,7 +57,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git history-substring-search docker tmuxinator)
+plugins=(git history-substring-search tmux tmuxinator)
 plugins+=(zsh-nvm)
 
 
