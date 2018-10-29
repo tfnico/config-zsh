@@ -137,6 +137,8 @@ export EDITOR=vim
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pb=pbcopy
 alias mux=tmuxinator
+#nvim stopped working
+#alias vim=nvim
 function sshunsafe() { ssh -v -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $1 }
 
 
