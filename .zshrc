@@ -1,3 +1,6 @@
+# Set term for reasons?
+export TERM="xterm-256color"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -100,4 +103,5 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias mux=tmuxinator
 alias open=gnome-open
+alias vim=nvim
 
