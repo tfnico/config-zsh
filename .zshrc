@@ -2,7 +2,7 @@
 export TERM="xterm-256color"
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/go/bin:$HOME/Android/platform-tools:/home/ferris/Android/build-tools/30.0.2:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/ferris/.oh-my-zsh"
@@ -105,3 +105,7 @@ alias mux=tmuxinator
 alias open=gnome-open
 alias vim=nvim
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/ferris/.sdkman"
+[[ -s "/home/ferris/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ferris/.sdkman/bin/sdkman-init.sh"
