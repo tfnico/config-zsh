@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/local/go/bin:$HOME/Android/platform-tools:/home/ferris/Android/build-tools/30.0.2:$PATH
+export PATH=/usr/local/go/bin:$HOME/go/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/thomas/.oh-my-zsh"
