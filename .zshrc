@@ -102,7 +102,6 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias mux=tmuxinator
 alias open=gnome-open
-alias vim=nvim
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
