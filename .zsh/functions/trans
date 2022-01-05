@@ -1,5 +1,0 @@
-#!/usr/bin/zsh
-
-trans () {
-	[[ -o transientrprompt ]] && unsetopt transientrprompt || setopt transientrprompt
-}

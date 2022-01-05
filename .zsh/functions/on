@@ -1,5 +1,0 @@
-#!/usr/bin/zsh
-
-on() {
-	who | awk '{print $1;}' | uniq -c
-}
