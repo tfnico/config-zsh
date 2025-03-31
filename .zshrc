@@ -1,5 +1,22 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/local/go/bin:$HOME/go/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+export PATH=\
+/usr/local/go/bin:\
+$HOME/go/bin:\
+$HOME/bin:\
+/usr/local/sbin:\
+/usr/local/bin:\
+/usr/sbin:\
+/usr/bin:\
+/sbin:\
+/bin:\
+/usr/games:\
+/usr/local/games:\
+/snap/bin:\
+$HOME/.local/bin:\
+/home/thomas/tools/android/platform-tools:\
+/home/thomas/development/flutter/bin:\
+$HOME/src/snabble/platform/bin:\
+/home/thomas/.local/share/JetBrains/Toolbox/scripts
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/thomas/.oh-my-zsh"
@@ -33,7 +50,7 @@ ZSH_THEME="robbyrussell"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -104,6 +121,34 @@ alias mux=tmuxinator
 alias open=gnome-open
 
 
+# Fix input method in vscode installed as snap:
+# export GTK_IM_MODULE="xim"
+
+
+# For github gh autocompletion:
+autoload -U compinit
+compinit -i
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/ferris/.sdkman"
 [[ -s "/home/ferris/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ferris/.sdkman/bin/sdkman-init.sh"
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/thomas/tools/google-cloud-sdk/path.zsh.inc' ]; then . '/home/thomas/tools/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/thomas/tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/thomas/tools/google-cloud-sdk/completion.zsh.inc'; fi
+
+GPG_TTY=$(tty)
+export GPG_TTY
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /home/thomas/bin/terraform terraform
+
+
+# For ripgrep:
+export RIPGREP_CONFIG_PATH=/home/thomas/.rgrc
+
+# For gh colors:
+export GLAMOUR_STYLE=light
